@@ -28,7 +28,7 @@ This is a backend API service for recording and managing hypothetical AI safety 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/humanchain-incident-log.git
+   git clone https://github.com/NikhilNaik23/incident_log_api.git
    cd humanchain-incident-log
    ```
 2. Install dependencies:
