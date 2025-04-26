@@ -1,7 +1,9 @@
+// Imports
 import { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import Incident from '../models/incident.model';
 
+// Get all incidents
 export const getAllIncidents = async (req: Request, res: Response): Promise<void> => {
   try {
     const incidents = await Incident.find({}).sort({ createdAt: -1 });
@@ -19,6 +21,7 @@ export const getAllIncidents = async (req: Request, res: Response): Promise<void
   }
 };
 
+// Create a new incident
 export const createIncident = async (req: Request, res: Response): Promise<void> => {
   try {
     const { title, description, severity } = req.body;
@@ -55,6 +58,7 @@ export const createIncident = async (req: Request, res: Response): Promise<void>
   }
 };
 
+// Get incident by ID
 export const getIncidentById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
@@ -79,6 +83,7 @@ export const getIncidentById = async (req: Request, res: Response): Promise<void
   }
 };
 
+// Delete incident by ID
 export const deleteIncidentById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;

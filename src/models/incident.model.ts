@@ -1,5 +1,7 @@
+// Imports
 import mongoose, { Document, Schema } from 'mongoose';
 
+// Incident interface
 interface IIncident extends Document {
   title: string;
   description: string;
@@ -7,6 +9,7 @@ interface IIncident extends Document {
   reported_at: Date;
 }
 
+// Incident schema
 const incidentSchema = new Schema<IIncident>({
   title: {
     type: String,
@@ -27,6 +30,7 @@ const incidentSchema = new Schema<IIncident>({
   },
 }, { timestamps: true });
 
+// Incident model
 const Incident = mongoose.model<IIncident>('Incident', incidentSchema);
 
 export default Incident;
