@@ -29,7 +29,7 @@ This is a backend API service for recording and managing hypothetical AI safety 
 
    ```bash
    git clone https://github.com/NikhilNaik23/incident_log_api.git
-   cd humanchain-incident-log
+   cd incident_log_api
    ```
 2. Install dependencies:
    ```bash
